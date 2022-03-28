@@ -1,0 +1,90 @@
+@use "sass:math";
+@import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
+
+a.KofiButton {
+  box-sizing: border-box;
+  background: #29abe0;
+  color: #fff;
+  font-size: 1em;
+  font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
+  font-weight: 700;
+  letter-spacing: math.div(0.15em, -14);
+  text-decoration: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  white-space: nowrap;
+  overflow-wrap: break-word;
+  line-height: 1;
+  min-width: math.div(150em, 14);
+  min-height: math.div(40em, 14);
+  box-shadow: math.div(1em, 14) math.div(1em, 14) 0 rgba(0, 0, 0, 0.2);
+  padding: math.div(2em, 14) math.div(12em, 14);
+  border-radius: math.div(7em, 14);
+  border: 0 none #fff;
+  cursor: pointer;
+  &:visited,
+  &:hover,
+  &:active {
+    text-decoration: none;
+  }
+  &:hover {
+    opacity: 0.85;
+  }
+  display: inline-flex;
+  flex-flow: row;
+  align-items: center;
+  img.KofiImage,
+  span.KofiText {
+    box-sizing: border-box;
+    letter-spacing: math.div(0.15em, -14);
+    line-height: 1;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 math.div(1em, 14) math.div(1em, 14) rgba(34, 34, 34, 0.05);
+  }
+  img.KofiImage {
+    display: initial;
+    height: math.div(15em, 14);
+    max-height: 228px;
+    width: math.div(22em, 14);
+    max-width: 353px;
+    vertical-align: middle;
+    border: none;
+    margin: 0 math.div(5em, 14) 0 0;
+    content: url("https://storage.ko-fi.com/cdn/cup-border.png");
+    animation: kofi-wiggle 3s infinite;
+  }
+}
+
+@keyframes kofi-wiggle {
+  0% {
+    transform: rotate(0) scale(1);
+  }
+  60% {
+    transform: rotate(0) scale(1);
+  }
+  75% {
+    transform: rotate(0) scale(1.12);
+  }
+  80% {
+    transform: rotate(0) scale(1.1);
+  }
+  84% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  88% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  92% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  96% {
+    transform: rotate(10deg) scale(1.1);
+  }
+  100% {
+    transform: rotate(0) scale(1);
+  }
+}

@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-flow: column;
+  gap: 1em;
+  .Header h1 {
+    min-height: fit-content;
+    font-size: 2.5rem;
+  }
+  .Main {
+    flex: 1;
+    min-height: fit-content;
+    font-size: 1rem;
+  }
+}
