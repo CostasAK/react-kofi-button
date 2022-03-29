@@ -16,7 +16,6 @@ a.KofiButton {
   white-space: nowrap;
   overflow-wrap: break-word;
   line-height: 1;
-  min-width: math.div(150em, 14);
   min-height: math.div(40em, 14);
   box-shadow: math.div(1em, 14) math.div(1em, 14) 0 rgba(0, 0, 0, 0.2);
   padding: math.div(2em, 14) math.div(12em, 14);
@@ -34,6 +33,7 @@ a.KofiButton {
   display: inline-flex;
   flex-flow: row;
   align-items: center;
+  gap: math.div(5em, 14);
   img.KofiImage,
   span.KofiText {
     box-sizing: border-box;
@@ -53,7 +53,7 @@ a.KofiButton {
     max-width: 353px;
     vertical-align: middle;
     border: none;
-    margin: 0 math.div(5em, 14) 0 0;
+    margin: 0;
     content: url("https://storage.ko-fi.com/cdn/cup-border.png");
     animation: kofi-wiggle 3s infinite;
   }
