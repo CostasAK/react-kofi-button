@@ -1,5 +1,6 @@
 {
   "name": "react-kofi-button",
+  "version": "0.1.0",
   "description": "React Components to link to your Ko-fi profile",
   "author": "CostasAK",
   "keywords": [
@@ -8,7 +9,7 @@
     "react",
     "button"
   ],
-  "version": "0.1.0",
+  "license": "MIT",
   "main": "dist/index.js",
   "private": false,
   "files": [
