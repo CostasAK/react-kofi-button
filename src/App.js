@@ -1,17 +1,15 @@
-import './App.scss'
+import "./App.scss";
 
-import KofiButton from './components/KofiButton'
+import KofiButton from "./components/KofiButton";
 
 function App() {
   return (
     <div className="App">
       <header className="Header">
-        <h1>
-          React Components for Ko-fi
-        </h1>
+        <h1>React Components for Ko-fi</h1>
       </header>
       <main className="Main">
-        <KofiButton />
+        <KofiButton username="costasak" />
       </main>
     </div>
   );
