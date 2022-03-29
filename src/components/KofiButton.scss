@@ -1,7 +1,7 @@
 @use "sass:math";
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
 
-a.KofiButton {
+.KofiButton {
   box-sizing: border-box;
   background: #29abe0;
   color: #fff;
@@ -34,8 +34,8 @@ a.KofiButton {
   flex-flow: row;
   align-items: center;
   gap: math.div(5em, 14);
-  img.KofiImage,
-  span.KofiText {
+  .KofiImage,
+  .KofiText {
     box-sizing: border-box;
     letter-spacing: math.div(0.15em, -14);
     line-height: 1;
@@ -45,7 +45,7 @@ a.KofiButton {
     text-decoration: none;
     text-shadow: 0 math.div(1em, 14) math.div(1em, 14) rgba(34, 34, 34, 0.05);
   }
-  img.KofiImage {
+  .KofiImage {
     display: initial;
     height: math.div(15em, 14);
     max-height: 228px;
