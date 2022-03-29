@@ -10,16 +10,19 @@
     "button"
   ],
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CostasAK/react-kofi-button"
+  },
+  "bugs": {
+    "url": "https://github.com/CostasAK/react-kofi-button/issues"
+  },
   "main": "dist/index.js",
   "private": false,
   "files": [
     "dist",
     "README.md"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/CostasAK/react-kofi-button"
-  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
