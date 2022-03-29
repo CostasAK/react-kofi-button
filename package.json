@@ -1,11 +1,29 @@
 {
   "name": "react-kofi-button",
+  "description": "React Components to link to your Ko-fi profile",
+  "author": "CostasAK",
+  "keywords": [
+    "ko-fi",
+    "react-component",
+    "react",
+    "button"
+  ],
   "version": "0.1.0",
-  "private": true,
+  "main": "dist/index.js",
+  "private": false,
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/CostasAK/react-kofi-button"
+  },
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "sass": "^1.49.9",
     "web-vitals": "^2.1.4"
   },
   "peerDependencies": {
@@ -17,7 +35,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rm -rf dist/*",
+    "dist": "npm run clean && babel src/ --out-dir dist --copy-files --no-copy-ignored --ignore src/**/*.stories.js"
   },
   "eslintConfig": {
     "extends": [
@@ -38,6 +58,10 @@
     ]
   },
   "devDependencies": {
-    "sass": "^1.49.9"
+    "@babel/cli": "^7.17.6",
+    "@babel/plugin-transform-react-jsx": "^7.17.3",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "cross-env": "^7.0.3"
   }
 }
