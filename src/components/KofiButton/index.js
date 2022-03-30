@@ -1,8 +1,7 @@
-import "./style.scss";
-
 import PropTypes from "prop-types";
 import React from "react";
-import kofiColors from "../../functions/kofiColors";
+import kofiColors from "../functions/kofiColors";
+import "./style.scss";
 
 const known_presets = ["thin", "skinny"];
 
