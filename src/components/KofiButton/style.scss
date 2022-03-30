@@ -71,6 +71,17 @@
       max-width: 353px;
     }
   }
+  &.skinny {
+    min-height: auto;
+    font-size: 15px;
+    padding: math.div(4em, 15) math.div(10em, 15);
+    border-radius: math.div(4em, 15);
+    .KofiImage {
+      height: 1em;
+      max-height: 228px;
+      max-width: 353px;
+    }
+  }
 }
 
 @keyframes kofi-wiggle {

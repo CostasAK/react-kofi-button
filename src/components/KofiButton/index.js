@@ -3,9 +3,16 @@ import "./style.scss";
 import PropTypes from "prop-types";
 import React from "react";
 
+const known_presets = ["thin", "skinny"];
+
 export default function KofiButton({ username, label, title, preset }) {
   username = username || "costasak";
   const profile_url = "https://ko-fi.com/" + username;
+
+  if (preset && !known_presets.includes(preset)) {
+    console.warn(`Unknown preset "${preset}", reverting to default`);
+    preset = "";
+  }
 
   return (
     <a
