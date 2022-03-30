@@ -11,5 +11,10 @@
     flex: 1;
     min-height: fit-content;
     font-size: 1rem;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 1em;
+    justify-content: safe center;
+    align-items: safe center;
   }
 }

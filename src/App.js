@@ -10,7 +10,8 @@ function App() {
         <h2>Examples of the different components, presets and properties</h2>
       </header>
       <main className="Main">
-        <KofiButton username="costasak" label="Support me" />
+        <KofiButton username="costasak" label="Default preset" />
+        <KofiButton username="costasak" label="Thin preset" preset="thin" />
       </main>
     </div>
   );

@@ -57,6 +57,20 @@
     content: url("https://storage.ko-fi.com/cdn/cup-border.png");
     animation: kofi-wiggle 3s infinite;
   }
+  &.thin {
+    min-height: auto;
+    padding: 0 math.div(6em, 14);
+    border-radius: math.div(5em, 14);
+    .KofiText {
+      padding: math.div(8.5em, 14) math.div(6em, 14) math.div(8.5em, 14) math.div(4.5em, 14);
+    }
+    .KofiImage {
+      height: math.div(19em, 14);
+      max-height: 228px;
+      width: math.div(29em, 14);
+      max-width: 353px;
+    }
+  }
 }
 
 @keyframes kofi-wiggle {
