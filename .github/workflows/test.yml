@@ -18,11 +18,14 @@ jobs:
         run: npm ci
       - name: "Run Tests"
         run: npm test
-      - name: Accidentally upload to the same artifact via multiple jobs
+      - name: Zip workspace
+        run: zip -r workspace.zip .
+      - name: Upload Workspace
         uses: actions/upload-artifact@v3
         with:
           name: workspace
-          path: ${{ github.workspace }}
+          path: workspace.zip
+
   npmjs:
     name: NPM Publish
     needs: npm-install
@@ -31,12 +34,17 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: workspace
+      - name: unzip artifact for deployment
+        run: unzip workspace.zip
+      - name: Check directory
+        run: ls -alh
       - name: "Babel Dist"
         run: npm run dist
       - name: "npm publish"
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+
   gh-pages:
     name: GH Pages Deploy
     needs: npm-install
@@ -45,6 +53,10 @@ jobs:
       - uses: actions/download-artifact@v3
         with:
           name: workspace
+      - name: unzip artifact for deployment
+        run: unzip workspace.zip
+      - name: Check directory
+        run: ls -alh
       - name: "GH Pages Deploy"
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
