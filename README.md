@@ -13,11 +13,26 @@
 React Components to link to your Ko-fi profile.
 
 - [How to use](#how-to-use)
+  - [Installation](#installation)
   - [`<KofiButton />`](#kofibutton-)
     - [Example](#example)
   - [Customization](#customization)
 
 ## How to use
+
+### Installation
+
+With npm
+
+```bash
+npm i react-kofi-button
+```
+
+or yarn
+
+```bash
+yarn add react-kofi-button
+```
 
 ### `<KofiButton />`
 
