@@ -1,4 +1,4 @@
-import "./KofiButton.scss";
+import "./style.scss";
 
 import PropTypes from "prop-types";
 import React from "react";
