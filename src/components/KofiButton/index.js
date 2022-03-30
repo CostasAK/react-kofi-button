@@ -4,10 +4,13 @@ import PropTypes from "prop-types";
 import React from "react";
 
 export default function KofiButton({ label, username, title }) {
+  username = username || "costasak";
+  const profile_url = "https://ko-fi.com/" + username;
+
   return (
     <a
       className="KofiButton"
-      href={"https://ko-fi.com/" + (username || "costasak")}
+      href={profile_url}
       target="_blank"
       rel="noreferrer noopener external"
       title={title}
