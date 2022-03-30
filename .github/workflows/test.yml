@@ -1,0 +1,36 @@
+name: NodeJS Continuous Deployment
+
+on: workflow_dispatch
+
+jobs:
+  npm-install:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+          cache: "npm"
+      - run: npm install
+  npm-test:
+    needs: npm-install
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm test
+  npmjs:
+    needs: npm-test
+    runs-on: ubuntu-latest
+    steps:
+      - run: npm run dist
+      - uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
+  gh-pages:
+    needs: npm-test
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
+          npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
