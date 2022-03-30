@@ -65,7 +65,7 @@
       padding: math.div(8.5em, 14) math.div(6em, 14) math.div(8.5em, 14) math.div(4.5em, 14);
     }
     .KofiImage {
-      height: math.div(19em, 14);
+      height: auto;
       max-height: 228px;
       width: math.div(29em, 14);
       max-width: 353px;
@@ -79,6 +79,7 @@
     .KofiImage {
       height: 1em;
       max-height: 228px;
+      width: auto;
       max-width: 353px;
     }
   }
