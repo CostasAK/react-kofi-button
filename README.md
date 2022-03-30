@@ -81,7 +81,7 @@ These buttons would all lead to [`https://ko-fi.com/costasak`](https://ko-fi.com
 | `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile.            |
 | `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                                   |
 | `title`    | Optional  | `""`                    | Text that shows on hovering the button.                                   |
-| `preset`   | Optional  | `""`                    | One of several presets that change the style of the button. See examples. |
+| `preset`   | Optional  | `""`                    | One of several presets that changes the style of the button. See examples. |
 
 ### Customization
 
