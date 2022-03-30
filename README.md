@@ -61,7 +61,12 @@ These buttons would all lead to [`https://ko-fi.com/costasak`](https://ko-fi.com
 ##### Thin preset
 
 ```jsx
-<KofiButton username="costasak" label="Thin preset" preset="thin" />
+<KofiButton
+  username="costasak"
+  label="Thin preset"
+  preset="thin"
+  backgroundColor="kofiRed"
+/>
 ```
 
 ![Thin preset example GIF](/screenshots/thin_preset.gif?raw=true "Thin preset example GIF")
@@ -69,19 +74,25 @@ These buttons would all lead to [`https://ko-fi.com/costasak`](https://ko-fi.com
 ##### Skinny preset
 
 ```jsx
-<KofiButton username="costasak" label="Skinny preset" preset="skinny" />
+<KofiButton
+  username="costasak"
+  label="Skinny preset"
+  preset="skinny"
+  backgroundColor="kofiGrey"
+/>
 ```
 
 ![Skinny preset example GIF](/screenshots/skinny_preset.gif?raw=true "Skinny preset example GIF")
 
 #### Properties
 
-| Property   | Required? | Default                 | Description                                                               |
-|------------|-----------|-------------------------|---------------------------------------------------------------------------|
-| `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile.            |
-| `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                                   |
-| `title`    | Optional  | `""`                    | Text that shows on hovering the button.                                   |
-| `preset`   | Optional  | `""`                    | One of several presets that changes the style of the button. See examples. |
+| Property          | Required? | Default                 | Description                                                                                                                                        |
+|-------------------|-----------|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------|
+| `username`        | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile.                                                                                     |
+| `label`           | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                                                                                                            |
+| `title`           | Optional  | `""`                    | Text that shows on hovering the button.                                                                                                            |
+| `preset`          | Optional  | `""`                    | One of several presets that change the style of the button. See examples.                                                                          |
+| `backgroundColor` | Optional  | `"kofiBlue"`            | The background color of the button. Can be one of the [Ko-fi brand colors](https://more.ko-fi.com/brand-assets) (`"kofiBlue"`, `"kofiRed"`, `"kofiYellow"` or `"kofiGrey"`) or any valid CSS color value. |
 
 ### Customization
 
