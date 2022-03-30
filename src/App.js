@@ -9,7 +9,7 @@ function App() {
         <h1>React Components for Ko-fi</h1>
       </header>
       <main className="Main">
-        <KofiButton username="costasak" />
+        <KofiButton username="costasak" label="Support me" />
       </main>
     </div>
   );

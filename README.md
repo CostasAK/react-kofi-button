@@ -11,3 +11,38 @@
 [![Ko-fi](https://img.shields.io/badge/support_me_on_ko--fi-F16061?style=for-the-badge&logo=kofi&logoColor=f5f5f5)](https://ko-fi.com/CostasAK)
 
 React Components to link to your Ko-fi profile.
+
+- [How to use](#how-to-use)
+  - [`<KofiButton />`](#kofibutton-)
+    - [Example](#example)
+  - [Customization](#customization)
+
+## How to use
+
+### `<KofiButton />`
+
+| Property   | Required? | Default                 | Description                                                    |
+|------------|-----------|-------------------------|----------------------------------------------------------------|
+| `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile. |
+| `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                        |
+| `title`    | Optional  | `""`                    | Text that shows on hovering the button.                        |
+
+#### Example
+
+```javascript
+<KofiButton username="costasak" label="Support me" />
+```
+
+![Default preset example GIF](/screenshots/default_preset.gif?raw=true "Default preset example GIF")
+
+The button will lead to [`https://ko-fi.com/costasak`](https://ko-fi.com/costasak) on click.
+
+### Customization
+
+Any of the presets can be further customized through CSS with the following classes.
+
+| Class         | Description                     |
+|---------------|---------------------------------|
+| `.KofiButton` | The entire clickable area.      |
+| `.KofiImage`  | The image within the button.    |
+| `.KofiText`   | The text (label) on the button. |
