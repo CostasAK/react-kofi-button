@@ -1,35 +1,52 @@
-name: NodeJS Continuous Deployment
+name: Testing Prerequisite Jobs
 
 on: workflow_dispatch
 
 jobs:
   npm-install:
+    name: Install and Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
+      - name: "Checkout Repository"
+        uses: actions/checkout@v3
+      - name: "Setup Node.js ${{ matrix.node-version }}"
+        uses: actions/setup-node@v3
         with:
           node-version: "16"
           cache: "npm"
-      - run: npm install
-  npm-test:
+      - name: "Clean Install"
+        run: npm ci
+      - name: "Run Tests"
+        run: npm test
+      - name: Accidentally upload to the same artifact via multiple jobs
+        uses: actions/upload-artifact@v3
+        with:
+          name: workspace
+          path: ${{ github.workspace }}
+  npmjs:
+    name: NPM Publish
     needs: npm-install
     runs-on: ubuntu-latest
     steps:
-      - run: npm test
-  npmjs:
-    needs: npm-test
-    runs-on: ubuntu-latest
-    steps:
-      - run: npm run dist
-      - uses: JS-DevTools/npm-publish@v1
+      - uses: actions/download-artifact@v3
+        with:
+          name: workspace
+      - name: "Babel Dist"
+        run: npm run dist
+      - name: "npm publish"
+        uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
   gh-pages:
-    needs: npm-test
+    name: GH Pages Deploy
+    needs: npm-install
     runs-on: ubuntu-latest
     steps:
-      - run: |
+      - uses: actions/download-artifact@v3
+        with:
+          name: workspace
+      - name: "GH Pages Deploy"
+        run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
           npm run deploy -- -u "github-actions-bot <support+actions@github.com>"
         env:
