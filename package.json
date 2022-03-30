@@ -38,7 +38,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "clean": "rm -rf dist/*",
-    "dist": "npm run clean && babel src/ --out-dir dist --copy-files --no-copy-ignored --ignore src/**/*.stories.js",
+    "dist": "npm run clean && babel src/components/ --out-dir dist --copy-files --no-copy-ignored --ignore src/**/*.stories.js",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },

@@ -1,6 +1,6 @@
 import "./App.scss";
 
-import KofiButton from "./components/KofiButton";
+import { KofiButton } from "./components";
 
 function App() {
   return (
