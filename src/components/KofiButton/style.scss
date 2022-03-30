@@ -1,93 +1,99 @@
 @use "sass:math";
 @import url("https://fonts.googleapis.com/css?family=Quicksand:400,700");
 
-.KofiButton {
+.KofiContainer {
   box-sizing: border-box;
-  background: #29abe0;
+  padding: 0;
   color: #fff;
-  font-size: 1em;
-  font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
-  font-weight: 700;
-  letter-spacing: math.div(0.15em, -14);
-  text-decoration: none;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  white-space: nowrap;
-  overflow-wrap: break-word;
-  line-height: 1;
-  min-height: math.div(40em, 14);
-  box-shadow: math.div(1em, 14) math.div(1em, 14) 0 rgba(0, 0, 0, 0.2);
-  padding: math.div(2em, 14) math.div(12em, 14);
-  border-radius: math.div(7em, 14);
-  border: 0 none #fff;
-  cursor: pointer;
-  &:visited,
-  &:hover,
-  &:active {
-    color: inherit;
-    text-decoration: inherit;
-  }
-  &:hover {
-    opacity: 0.85;
-  }
-  display: inline-flex;
-  flex-flow: row;
-  align-items: center;
-  gap: math.div(5em, 14);
-  .KofiImage,
-  .KofiText {
+  .KofiButton {
     box-sizing: inherit;
+    background: #29abe0;
     color: inherit;
     font-size: inherit;
-    font-family: inherit;
-    font-weight: inherit;
-    letter-spacing: inherit;
-    text-decoration: inherit;
-    text-align: inherit;
-    white-space: inherit;
-    overflow-wrap: inherit;
-    cursor: inherit;
-    line-height: inherit;
+    font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
+    font-weight: 700;
+    letter-spacing: math.div(0.15em, -14);
+    text-decoration: none;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-align: center;
+    white-space: nowrap;
+    overflow-wrap: break-word;
+    line-height: 1;
+    min-height: math.div(40em, 14);
+    box-shadow: math.div(1em, 14) math.div(1em, 14) 0 rgba(0, 0, 0, 0.2);
     margin: 0;
-    padding: 0;
-    text-shadow: 0 math.div(1em, 14) math.div(1em, 14) rgba(34, 34, 34, 0.05);
-  }
-  .KofiImage {
-    display: initial;
-    height: math.div(15em, 14);
-    max-height: 228px;
-    width: math.div(22em, 14);
-    max-width: 353px;
-    vertical-align: middle;
-    border: none;
-    margin: 0;
-    content: url("https://storage.ko-fi.com/cdn/cup-border.png");
-    animation: kofi-wiggle 3s infinite;
-  }
-  &.thin {
-    min-height: auto;
-    padding: 0 math.div(6em, 14);
-    border-radius: math.div(5em, 14);
+    padding: math.div(2em, 14) math.div(12em, 14);
+    border-radius: math.div(7em, 14);
+    border: 0 none #fff;
+    cursor: pointer;
+    &:visited,
+    &:hover,
+    &:active {
+      color: inherit;
+      text-decoration: none;
+    }
+    &:hover {
+      opacity: 0.85;
+    }
+    display: inline-flex;
+    flex-flow: row;
+    align-items: center;
+    gap: math.div(5em, 14);
+    .KofiImage,
     .KofiText {
-      padding: math.div(8.5em, 14) math.div(6em, 14) math.div(8.5em, 14) math.div(4.5em, 14);
+      box-sizing: inherit;
+      color: inherit;
+      font-size: inherit;
+      font-family: inherit;
+      font-weight: inherit;
+      letter-spacing: inherit;
+      text-decoration: inherit;
+      text-align: inherit;
+      white-space: inherit;
+      overflow-wrap: inherit;
+      cursor: inherit;
+      line-height: inherit;
+      margin: 0;
+      padding: 0;
+      text-shadow: 0 math.div(1em, 14) math.div(1em, 14) rgba(34, 34, 34, 0.05);
     }
     .KofiImage {
-      height: auto;
+      display: initial;
+      height: math.div(15em, 14);
       max-height: 228px;
-      width: math.div(29em, 14);
+      width: math.div(22em, 14);
       max-width: 353px;
+      vertical-align: middle;
+      border: none;
+      content: url("https://storage.ko-fi.com/cdn/cup-border.png");
+      animation: kofi-wiggle 3s infinite;
     }
-  }
-  &.skinny {
-    min-height: auto;
-    padding: math.div(4em, 15) math.div(10em, 15);
-    border-radius: math.div(4em, 15);
-    .KofiImage {
-      height: 1em;
-      max-height: 228px;
-      width: auto;
-      max-width: 353px;
+    &.thin {
+      min-height: auto;
+      padding: 0 math.div(6em, 14);
+      border-radius: math.div(5em, 14);
+      .KofiText {
+        padding: math.div(8.5em, 14) math.div(6em, 14) math.div(8.5em, 14)
+          math.div(4.5em, 14);
+      }
+      .KofiImage {
+        height: auto;
+        max-height: 228px;
+        width: math.div(29em, 14);
+        max-width: 353px;
+      }
+    }
+    &.skinny {
+      min-height: auto;
+      padding: math.div(4em, 15) math.div(10em, 15);
+      border-radius: math.div(4em, 15);
+      .KofiImage {
+        height: 1em;
+        max-height: 228px;
+        width: auto;
+        max-width: 353px;
+      }
     }
   }
 }

@@ -22,17 +22,19 @@ export default function KofiButton({
   }
 
   return (
-    <a
-      className={"KofiButton " + preset}
-      href={profile_url}
-      target="_blank"
-      rel="noreferrer noopener external"
-      title={title}
-      style={{ background: kofiColors(backgroundColor) }}
-    >
-      <img className="KofiImage" alt="" />
-      {label && <span className="KofiText">{label}</span>}
-    </a>
+    <div className="KofiContainer">
+      <a
+        className={"KofiButton " + preset}
+        href={profile_url}
+        target="_blank"
+        rel="noreferrer noopener external"
+        title={title}
+        style={{ background: kofiColors(backgroundColor) }}
+      >
+        <img className="KofiImage" alt="" />
+        {label && <span className="KofiText">{label}</span>}
+      </a>
+    </div>
   );
 }
 
