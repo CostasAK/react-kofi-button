@@ -16,8 +16,8 @@ React Components to link to your Ko-fi profile.
   - [Installation](#installation)
   - [`<KofiButton />`](#kofibutton-)
     - [Importing](#importing)
-    - [Properties](#properties)
     - [Example](#example)
+    - [Properties](#properties)
   - [Customization](#customization)
 
 ## How to use
@@ -46,14 +46,6 @@ Displays a configurable button that scales to the current font size and links to
 import { KofiButton } from "react-kofi-button";
 ```
 
-#### Properties
-
-| Property   | Required? | Default                 | Description                                                    |
-|------------|-----------|-------------------------|----------------------------------------------------------------|
-| `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile. |
-| `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                        |
-| `title`    | Optional  | `""`                    | Text that shows on hovering the button.                        |
-
 #### Example
 
 ```jsx
@@ -63,6 +55,14 @@ import { KofiButton } from "react-kofi-button";
 ![Default preset example GIF](/screenshots/default_preset.gif?raw=true "Default preset example GIF")
 
 The button will lead to [`https://ko-fi.com/costasak`](https://ko-fi.com/costasak) on click.
+
+#### Properties
+
+| Property   | Required? | Default                 | Description                                                    |
+|------------|-----------|-------------------------|----------------------------------------------------------------|
+| `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile. |
+| `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                        |
+| `title`    | Optional  | `""`                    | Text that shows on hovering the button.                        |
 
 ### Customization
 
