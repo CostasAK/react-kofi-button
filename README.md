@@ -29,7 +29,7 @@ React Components to link to your Ko-fi profile.
 
 #### Example
 
-```javascript
+```jsx
 <KofiButton username="costasak" label="Support me" />
 ```
 
