@@ -15,6 +15,8 @@ React Components to link to your Ko-fi profile.
 - [How to use](#how-to-use)
   - [Installation](#installation)
   - [`<KofiButton />`](#kofibutton-)
+    - [Importing](#importing)
+    - [Properties](#properties)
     - [Example](#example)
   - [Customization](#customization)
 
@@ -35,6 +37,16 @@ yarn add react-kofi-button
 ```
 
 ### `<KofiButton />`
+
+Displays a configurable button that scales to the current font size and links to the profile page of the configured user.
+
+#### Importing
+
+```javascript
+import { KofiButton } from "react-kofi-button";
+```
+
+#### Properties
 
 | Property   | Required? | Default                 | Description                                                    |
 |------------|-----------|-------------------------|----------------------------------------------------------------|
