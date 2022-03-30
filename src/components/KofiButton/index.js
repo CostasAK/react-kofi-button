@@ -2,10 +2,17 @@ import "./style.scss";
 
 import PropTypes from "prop-types";
 import React from "react";
+import kofiColors from "../../functions/kofiColors";
 
 const known_presets = ["thin", "skinny"];
 
-export default function KofiButton({ username, label, title, preset }) {
+export default function KofiButton({
+  username,
+  label,
+  title,
+  preset,
+  backgroundColor,
+}) {
   username = username || "costasak";
   const profile_url = "https://ko-fi.com/" + username;
 
@@ -21,6 +28,7 @@ export default function KofiButton({ username, label, title, preset }) {
       target="_blank"
       rel="noreferrer noopener external"
       title={title}
+      style={{ background: kofiColors(backgroundColor) }}
     >
       <img className="KofiImage" alt="" />
       {label && <span className="KofiText">{label}</span>}
@@ -33,10 +41,12 @@ KofiButton.propTypes = {
   label: PropTypes.string,
   title: PropTypes.string,
   preset: PropTypes.string,
+  backgroundColor: PropTypes.string,
 };
 
 KofiButton.defaultProps = {
   label: "Support Me on Ko-fi",
   title: "",
   preset: "",
+  backgroundColor: "kofiBlue",
 };

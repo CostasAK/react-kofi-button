@@ -11,8 +11,18 @@ function App() {
       </header>
       <main className="Main">
         <KofiButton username="costasak" label="Default preset" />
-        <KofiButton username="costasak" label="Thin preset" preset="thin" />
-        <KofiButton username="costasak" label="Skinny preset" preset="skinny" />
+        <KofiButton
+          username="costasak"
+          label="Thin preset"
+          preset="thin"
+          backgroundColor="kofiRed"
+        />
+        <KofiButton
+          username="costasak"
+          label="Skinny preset"
+          preset="skinny"
+          backgroundColor="kofiGrey"
+        />
       </main>
     </div>
   );
