@@ -25,7 +25,8 @@
   &:visited,
   &:hover,
   &:active {
-    text-decoration: none;
+    color: inherit;
+    text-decoration: inherit;
   }
   &:hover {
     opacity: 0.85;
@@ -36,13 +37,20 @@
   gap: math.div(5em, 14);
   .KofiImage,
   .KofiText {
-    box-sizing: border-box;
-    letter-spacing: math.div(0.15em, -14);
-    line-height: 1;
+    box-sizing: inherit;
+    color: inherit;
+    font-size: inherit;
+    font-family: inherit;
+    font-weight: inherit;
+    letter-spacing: inherit;
+    text-decoration: inherit;
+    text-align: inherit;
+    white-space: inherit;
+    overflow-wrap: inherit;
+    cursor: inherit;
+    line-height: inherit;
     margin: 0;
     padding: 0;
-    text-align: center;
-    text-decoration: none;
     text-shadow: 0 math.div(1em, 14) math.div(1em, 14) rgba(34, 34, 34, 0.05);
   }
   .KofiImage {
