@@ -16,7 +16,7 @@ React Components to link to your Ko-fi profile.
   - [Installation](#installation)
   - [`<KofiButton />`](#kofibutton-)
     - [Importing](#importing)
-    - [Example](#example)
+    - [Examples](#examples)
     - [Properties](#properties)
   - [Customization](#customization)
 
@@ -46,7 +46,11 @@ Displays a configurable button that scales to the current font size and links to
 import { KofiButton } from "react-kofi-button";
 ```
 
-#### Example
+#### Examples
+
+These buttons would all lead to [`https://ko-fi.com/costasak`](https://ko-fi.com/costasak) on click, since the `username` property is set to `"costasak"` on all of them.
+
+##### Default preset
 
 ```jsx
 <KofiButton username="costasak" label="Support me" />
@@ -54,15 +58,30 @@ import { KofiButton } from "react-kofi-button";
 
 ![Default preset example GIF](/screenshots/default_preset.gif?raw=true "Default preset example GIF")
 
-The button will lead to [`https://ko-fi.com/costasak`](https://ko-fi.com/costasak) on click.
+##### Thin preset
+
+```jsx
+<KofiButton username="costasak" label="Thin preset" preset="thin" />
+```
+
+![Thin preset example GIF](/screenshots/thin_preset.gif?raw=true "Thin preset example GIF")
+
+##### Skinny preset
+
+```jsx
+<KofiButton username="costasak" label="Skinny preset" preset="skinny" />
+```
+
+![Skinny preset example GIF](/screenshots/skinny_preset.gif?raw=true "Skinny preset example GIF")
 
 #### Properties
 
-| Property   | Required? | Default                 | Description                                                    |
-|------------|-----------|-------------------------|----------------------------------------------------------------|
-| `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile. |
-| `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                        |
-| `title`    | Optional  | `""`                    | Text that shows on hovering the button.                        |
+| Property   | Required? | Default                 | Description                                                               |
+|------------|-----------|-------------------------|---------------------------------------------------------------------------|
+| `username` | Required  | `"costasak"`            | Your Ko-fi username, which appears in the URL to your profile.            |
+| `label`    | Optional  | `"Support Me on Ko-fi"` | The text on the button.                                                   |
+| `title`    | Optional  | `""`                    | Text that shows on hovering the button.                                   |
+| `preset`   | Optional  | `""`                    | One of several presets that change the style of the button. See examples. |
 
 ### Customization
 
