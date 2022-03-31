@@ -67,7 +67,7 @@
       vertical-align: middle;
       border: none;
       content: url("https://storage.ko-fi.com/cdn/cup-border.png");
-      animation: kofi-wiggle 3s infinite;
+      animation: kofi-wiggle 3s infinite 1.8s;
     }
     &.thin {
       min-height: auto;
@@ -102,26 +102,26 @@
   0% {
     transform: rotate(0) scale(1);
   }
-  60% {
-    transform: rotate(0) scale(1);
-  }
-  75% {
+  15% {
     transform: rotate(0) scale(1.12);
   }
-  80% {
+  20% {
     transform: rotate(0) scale(1.1);
   }
-  84% {
+  24% {
     transform: rotate(-10deg) scale(1.1);
   }
-  88% {
+  28% {
     transform: rotate(10deg) scale(1.1);
   }
-  92% {
+  32% {
     transform: rotate(-10deg) scale(1.1);
   }
-  96% {
+  36% {
     transform: rotate(10deg) scale(1.1);
+  }
+  40% {
+    transform: rotate(0) scale(1);
   }
   100% {
     transform: rotate(0) scale(1);
