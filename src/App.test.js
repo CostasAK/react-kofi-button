@@ -4,6 +4,6 @@ import App from "./App";
 
 test("renders package name", () => {
   render(<App />);
-  const linkElement = screen.getByText(/react-kofi-button/i);
+  const linkElement = screen.getAllByText(/react-kofi-button/i)[0];
   expect(linkElement).toBeInTheDocument();
 });
