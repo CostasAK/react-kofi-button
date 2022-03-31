@@ -54,7 +54,6 @@ KofiButton.propTypes = {
 KofiButton.defaultProps = {
   label: "Support Me on Ko-fi",
   title: "",
-  preset: "",
   backgroundColor: "kofiBlue",
   animation: true,
 };
