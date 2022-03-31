@@ -18,7 +18,6 @@ React Components to link to your Ko-fi profile.
     - [Importing](#importing)
     - [Examples](#examples)
     - [Properties](#properties)
-  - [Customization](#customization)
 
 ## How to use
 
@@ -94,13 +93,3 @@ These buttons would all lead to [`https://ko-fi.com/costasak`](https://ko-fi.com
 | `preset`          | Optional  | `""`                    | One of several presets that change the style of the button. See examples.                                                                                                                         |
 | `backgroundColor` | Optional  | `"kofiBlue"`            | The background color of the button. Can be one of the named Ko-fi colors (kofiBlue, kofiRed, kofiYellow or kofiGrey) or any valid CSS color value.                                                |
 | `animation`       | Optional  | `true`                  | Whether the Ko-fi logo should be animated. Accepts `true`, `"true"`, `"on_hover"`, `false` and `"false"`. The `"on_hover"` option causes the logo to only be animated when the button is hovered. |
-
-### Customization
-
-Any of the presets can be further customized through CSS with the following classes.
-
-| Class         | Description                     |
-|---------------|---------------------------------|
-| `.KofiButton` | The entire clickable area.      |
-| `.KofiImage`  | The image within the button.    |
-| `.KofiText`   | The text (label) on the button. |
