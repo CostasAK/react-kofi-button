@@ -35,7 +35,7 @@
     }
     &:hover {
       opacity: 0.85;
-      .KofiImage.on_hover {
+      .KofiImage.animation_on_hover {
         animation: kofi-wiggle 3s infinite;
       }
     }
@@ -70,7 +70,7 @@
       vertical-align: middle;
       border: none;
       content: url("https://storage.ko-fi.com/cdn/cup-border.png");
-      &.true {
+      &.animation_true {
         animation: kofi-wiggle 3s infinite 1.8s;
       }
     }

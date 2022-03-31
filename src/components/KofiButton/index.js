@@ -32,7 +32,7 @@ export default function KofiButton({
         title={title}
         style={{ background: kofiColors(backgroundColor) }}
       >
-        <img className={"KofiImage " + animation} alt="" />
+        <img className={"KofiImage animation_" + animation} alt="" />
         {label && <span className="KofiText">{label}</span>}
       </a>
     </div>
