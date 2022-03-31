@@ -12,6 +12,7 @@ export default function KofiButton({
   title,
   preset,
   backgroundColor,
+  animation,
 }) {
   username = username || "costasak";
   const profile_url = "https://ko-fi.com/" + username;
@@ -31,7 +32,7 @@ export default function KofiButton({
         title={title}
         style={{ background: kofiColors(backgroundColor) }}
       >
-        <img className="KofiImage" alt="" />
+        <img className={"KofiImage " + animation} alt="" />
         {label && <span className="KofiText">{label}</span>}
       </a>
     </div>
@@ -44,6 +45,10 @@ KofiButton.propTypes = {
   title: PropTypes.string,
   preset: PropTypes.string,
   backgroundColor: PropTypes.string,
+  animation: PropTypes.oneOfType([
+    PropTypes.bool,
+    PropTypes.oneOf(["on_hover"]),
+  ]),
 };
 
 KofiButton.defaultProps = {
@@ -51,4 +56,5 @@ KofiButton.defaultProps = {
   title: "",
   preset: "",
   backgroundColor: "kofiBlue",
+  animation: true,
 };

@@ -16,12 +16,14 @@ function App() {
           label="Thin preset"
           preset="thin"
           backgroundColor="kofiRed"
+          animation="on_hover"
         />
         <KofiButton
           username="costasak"
           label="Skinny preset"
           preset="skinny"
           backgroundColor="kofiGrey"
+          animation={false}
         />
       </main>
     </div>
