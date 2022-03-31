@@ -4,7 +4,14 @@ import PropTypes from "prop-types";
 import React from "react";
 import kofiColors from "../functions/kofiColors";
 
-const known_presets = ["thin", "skinny", "circle", "no_background"];
+const known_presets = [
+  "",
+  "default",
+  "thin",
+  "skinny",
+  "circle",
+  "no_background",
+];
 
 export default function KofiButton({
   username,
@@ -19,6 +26,9 @@ export default function KofiButton({
 
   if (preset && !known_presets.includes(preset)) {
     console.warn(`Unknown preset "${preset}", reverting to default`);
+    preset = "";
+  }
+  if (preset === "default") {
     preset = "";
   }
 
@@ -47,7 +57,7 @@ KofiButton.propTypes = {
   username: PropTypes.string.isRequired,
   label: PropTypes.string,
   title: PropTypes.string,
-  preset: PropTypes.string,
+  preset: PropTypes.oneOf(known_presets),
   backgroundColor: PropTypes.string,
   animation: PropTypes.oneOfType([
     PropTypes.bool,
