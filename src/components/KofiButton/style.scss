@@ -7,9 +7,11 @@
   padding: 0;
   color: #fff;
   text-rendering: optimizeLegibility;
+  line-height: 0;
+  --background-color: #29abe0;
   .KofiButton {
     box-sizing: inherit;
-    background: #29abe0;
+    background: var(--background-color);
     color: inherit;
     font-size: inherit;
     font-family: "Quicksand", Helvetica, Century Gothic, sans-serif;
@@ -21,7 +23,7 @@
     text-align: center;
     white-space: nowrap;
     overflow-wrap: break-word;
-    line-height: 1;
+    line-height: inherit;
     min-height: math.div(40em, 14);
     box-shadow: math.div(1em, 14) math.div(1em, 14) 0 rgba(0, 0, 0, 0.2);
     margin: 0;
@@ -59,36 +61,39 @@
       overflow-wrap: inherit;
       cursor: inherit;
       line-height: inherit;
-      margin: 0;
+      margin: auto;
       padding: 0;
       text-shadow: 0 math.div(1em, 14) math.div(1em, 14) rgba(34, 34, 34, 0.05);
     }
-    .KofiImage {
-      display: initial;
-      height: math.div(15em, 14);
-      max-height: 228px;
-      width: math.div(22em, 14);
-      max-width: 353px;
-      vertical-align: middle;
-      border: none;
-      content: url("https://storage.ko-fi.com/cdn/cup-border.png");
-      &.animation_true {
-        animation: kofi-wiggle 3s infinite 1.8s;
+    .KofiImageContainer {
+      max-height: fit-content;
+      line-height: 0;
+      .KofiImage {
+        display: initial;
+        height: math.div(15em, 14);
+        max-height: 228px;
+        width: math.div(22em, 14);
+        max-width: 353px;
+        vertical-align: middle;
+        border: none;
+        content: url("https://storage.ko-fi.com/cdn/cup-border.png");
+        &.animation_true {
+          animation: kofi-wiggle 3s infinite 1.8s;
+        }
       }
     }
     &.thin {
       min-height: auto;
       padding: 0 math.div(6em, 14);
       border-radius: math.div(5em, 14);
+      line-height: 1;
       .KofiText {
         padding: math.div(8.5em, 14) math.div(6em, 14) math.div(8.5em, 14)
           math.div(4.5em, 14);
       }
       .KofiImage {
         height: auto;
-        max-height: 228px;
         width: math.div(29em, 14);
-        max-width: 353px;
       }
     }
     &.skinny {
@@ -97,9 +102,45 @@
       border-radius: math.div(4em, 15);
       .KofiImage {
         height: 1em;
-        max-height: 228px;
         width: auto;
-        max-width: 353px;
+      }
+    }
+    &.circle {
+      min-height: auto;
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      color: black;
+      gap: math.div(3em, 14);
+      .KofiImageContainer {
+        background: var(--background-color);
+        height: 1.5em;
+        width: 1.5em;
+        border-radius: 50%;
+      }
+      .KofiImage {
+        height: 0.75em;
+        width: auto;
+        margin: auto;
+        padding-left: math.div(5 * 0.75em, 92.5);
+      }
+    }
+    &.no_background {
+      min-height: auto;
+      padding: 0;
+      border-radius: 0;
+      background: none;
+      box-shadow: none;
+      color: black;
+      gap: math.div(2em, 14);
+      .KofiImageContainer {
+        .KofiImage {
+          width: 1.5em;
+          height: auto;
+          margin: auto;
+          padding-left: math.div(5 * 0.75em, 92.5);
+        }
       }
     }
   }

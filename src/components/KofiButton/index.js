@@ -4,7 +4,7 @@ import PropTypes from "prop-types";
 import React from "react";
 import kofiColors from "../functions/kofiColors";
 
-const known_presets = ["thin", "skinny"];
+const known_presets = ["thin", "skinny", "circle", "no_background"];
 
 export default function KofiButton({
   username,
@@ -23,16 +23,20 @@ export default function KofiButton({
   }
 
   return (
-    <div className="KofiContainer">
+    <div
+      className="KofiContainer"
+      style={{ "--background-color": kofiColors(backgroundColor) }}
+    >
       <a
         className={"KofiButton " + preset}
         href={profile_url}
         target="_blank"
         rel="noreferrer noopener external"
         title={title}
-        style={{ background: kofiColors(backgroundColor) }}
       >
-        <img className={"KofiImage animation_" + animation} alt="" />
+        <figure className="KofiImageContainer">
+          <img className={"KofiImage animation_" + animation} alt="" />
+        </figure>
         {label && <span className="KofiText">{label}</span>}
       </a>
     </div>

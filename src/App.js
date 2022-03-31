@@ -32,7 +32,7 @@ function App() {
           <section className="SocialPreview">
             <h1>react-kofi-button</h1>
             <h2>React Components to link to your Ko-fi profile</h2>
-            <figure>
+            <figure style={{ fontSize: "1.25em" }}>
               <KofiButton
                 username="costasak"
                 label="Support Me"
@@ -40,7 +40,7 @@ function App() {
               />
               <KofiButton
                 username="costasak"
-                label="Donate"
+                label="I'm on Ko-fi"
                 preset="thin"
                 backgroundColor="kofiRed"
                 animation={false}
@@ -50,6 +50,19 @@ function App() {
                 label="Buy me a coffee"
                 preset="skinny"
                 backgroundColor="kofiGrey"
+                animation={false}
+              />
+              <KofiButton
+                username="costasak"
+                label="Ko-fi"
+                preset="circle"
+                backgroundColor="kofiYellow"
+                animation={false}
+              />
+              <KofiButton
+                username="costasak"
+                label="Donate"
+                preset="no_background"
                 animation={false}
               />
             </figure>
