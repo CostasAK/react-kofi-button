@@ -1,20 +1,35 @@
+@use "sass:math";
+
 .App {
   text-align: center;
   display: flex;
   flex-flow: column;
-  gap: 1em;
-  .Header h1 {
-    min-height: fit-content;
-    font-size: 2.5rem;
+  .SocialPreviewContainer {
+    .SocialPreviewBox {
+      width: 1280px - 2 * 80px;
+      height: 640px - 2 * 80px;
+      padding: 80px;
+      margin: auto;
+      background: white;
+      color: black;
+      display: flex;
+      justify-content: center;
+      .SocialPreview {
+        margin: auto;
+        font-size: 250%;
+        h1 {
+          font-family: "Fira Code", monospace;
+          margin-top: 0;
+        }
+      }
+    }
   }
-  .Main {
-    flex: 1;
-    min-height: fit-content;
-    font-size: 1rem;
+  figure {
+    margin: 0;
     display: flex;
     flex-flow: row wrap;
-    gap: 1em;
     justify-content: safe center;
     align-items: safe center;
+    gap: 1em;
   }
 }
