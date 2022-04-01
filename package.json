@@ -17,6 +17,7 @@
   "bugs": {
     "url": "https://github.com/CostasAK/react-kofi-button/issues"
   },
+  "homepage": "https://costasak.github.io/react-kofi-button/",
   "main": "dist/index.js",
   "private": false,
   "files": [
@@ -34,10 +35,12 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "clean": "rm -rf dist/*",
+    "clean": "rm -rf dist/ && rm -rf storybook-static/",
     "dist": "npm run clean && babel src/components/ --out-dir dist --copy-files --no-copy-ignored --ignore src/**/*.stories.js",
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build-storybook",
+    "deploy": "gh-pages -d storybook-static",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   },
   "eslintConfig": {
     "extends": [
@@ -59,14 +62,28 @@
   },
   "devDependencies": {
     "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.8",
     "@babel/plugin-transform-react-jsx": "^7.17.3",
     "@babel/preset-env": "^7.16.11",
     "@babel/preset-react": "^7.16.7",
+    "@storybook/addon-actions": "^6.4.20",
+    "@storybook/addon-essentials": "^6.4.20",
+    "@storybook/addon-interactions": "^6.4.20",
+    "@storybook/addon-links": "^6.4.20",
+    "@storybook/builder-webpack5": "^6.4.19",
+    "@storybook/manager-webpack5": "^6.4.19",
+    "@storybook/node-logger": "^6.4.19",
+    "@storybook/preset-create-react-app": "^4.1.0",
+    "@storybook/react": "^6.4.20",
+    "@storybook/testing-library": "^0.0.9",
     "@testing-library/jest-dom": "^5.16.3",
     "@testing-library/react": "^12.1.4",
     "@testing-library/user-event": "^13.5.0",
+    "babel-loader": "^8.2.4",
     "cross-env": "^7.0.3",
     "gh-pages": "^3.2.3",
-    "sass": "^1.49.9"
+    "sass": "^1.49.9",
+    "storybook-dark-mode": "^1.0.9",
+    "webpack": "^5.70.0"
   }
 }
