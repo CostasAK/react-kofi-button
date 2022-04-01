@@ -59,10 +59,7 @@ KofiButton.propTypes = {
   title: PropTypes.string,
   preset: PropTypes.oneOf(known_presets),
   backgroundColor: PropTypes.string,
-  animation: PropTypes.oneOfType([
-    PropTypes.bool,
-    PropTypes.oneOf(["on_hover"]),
-  ]),
+  animation: PropTypes.oneOf([true, false, "true", "false", "on_hover"]),
 };
 
 KofiButton.defaultProps = {

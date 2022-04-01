@@ -68,6 +68,11 @@
     .KofiImageContainer {
       max-height: fit-content;
       line-height: 0;
+      margin: 0;
+      padding: 0;
+      display: inline-flex;
+      justify-items: safe center;
+      align-items: safe center;
       .KofiImage {
         display: initial;
         height: math.div(15em, 14);
