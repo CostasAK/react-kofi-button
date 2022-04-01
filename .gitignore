@@ -1,8 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # Temporary, until I make an introduction page on storybook
-src/stories/assets
-src/stories/Introduction.example_stories.mdx
+/src/stories/assets
+/src/stories/Introduction.example_stories.mdx
 
 # dependencies
 /node_modules
@@ -15,6 +15,7 @@ src/stories/Introduction.example_stories.mdx
 # production
 /build
 /dist
+/storybook-static
 
 # misc
 .DS_Store
