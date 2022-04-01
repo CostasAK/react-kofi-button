@@ -1,4 +1,50 @@
 @import url(https://fonts.googleapis.com/css?family=Quicksand:400,700);
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
 .KofiContainer{box-sizing:border-box;display:inline;padding:0;color:#fff;text-rendering:optimizeLegibility;line-height:0;--background-color: #29abe0}.KofiContainer .KofiButton{box-sizing:inherit;background:var(--background-color);color:inherit;font-size:inherit;font-family:"Quicksand",Helvetica,Century Gothic,sans-serif;font-weight:700;letter-spacing:-.0107142857em;text-decoration:none;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;text-align:center;white-space:nowrap;overflow-wrap:break-word;line-height:inherit;min-height:2.8571428571em;box-shadow:.0714285714em .0714285714em 0 rgba(0,0,0,.2);margin:0;padding:.1428571429em .8571428571em;border-radius:.5em;border:0 none #fff;cursor:pointer;display:inline-flex;flex-flow:row;align-items:center;gap:.3571428571em}.KofiContainer .KofiButton:visited,.KofiContainer .KofiButton:hover,.KofiContainer .KofiButton:active{color:inherit;text-decoration:none}.KofiContainer .KofiButton:hover{opacity:.85}.KofiContainer .KofiButton:hover .KofiImage.animation_on_hover{-webkit-animation:kofi-wiggle 3s infinite;animation:kofi-wiggle 3s infinite}.KofiContainer .KofiButton .KofiImage,.KofiContainer .KofiButton .KofiText{box-sizing:inherit;color:inherit;font-size:inherit;font-family:inherit;font-weight:inherit;letter-spacing:inherit;text-decoration:inherit;text-align:inherit;white-space:inherit;overflow-wrap:inherit;cursor:inherit;line-height:inherit;margin:auto;padding:0;text-shadow:0 .0714285714em .0714285714em rgba(34,34,34,.05)}.KofiContainer .KofiButton .KofiImageContainer{max-height:-webkit-fit-content;max-height:-moz-fit-content;max-height:fit-content;line-height:0;margin:0;padding:0;display:inline-flex;justify-items:safe center;align-items:safe center}.KofiContainer .KofiButton .KofiImageContainer .KofiImage{display:inline;display:initial;height:1.0714285714em;max-height:228px;width:1.5714285714em;max-width:353px;vertical-align:middle;border:none;content:url("https://storage.ko-fi.com/cdn/cup-border.png")}.KofiContainer .KofiButton .KofiImageContainer .KofiImage.animation_true{-webkit-animation:kofi-wiggle 3s infinite 1.8s;animation:kofi-wiggle 3s infinite 1.8s}.KofiContainer .KofiButton.thin{min-height:auto;padding:0 .4285714286em;border-radius:.3571428571em;line-height:1}.KofiContainer .KofiButton.thin .KofiText{padding:.6071428571em .4285714286em .6071428571em .3214285714em}.KofiContainer .KofiButton.thin .KofiImage{height:auto;width:2.0714285714em}.KofiContainer .KofiButton.skinny{min-height:auto;padding:.2666666667em .6666666667em;border-radius:.2666666667em}.KofiContainer .KofiButton.skinny .KofiImage{height:1em;width:auto}.KofiContainer .KofiButton.circle{min-height:auto;padding:0;border-radius:0;background:none;box-shadow:none;color:#000;gap:.2142857143em}.KofiContainer .KofiButton.circle .KofiImageContainer{background:var(--background-color);height:1.5em;width:1.5em;border-radius:50%}.KofiContainer .KofiButton.circle .KofiImage{height:.75em;width:auto;margin:auto;padding-left:.0405405405em}.KofiContainer .KofiButton.no_background{min-height:auto;padding:0;border-radius:0;background:none;box-shadow:none;color:#000;gap:.1428571429em}.KofiContainer .KofiButton.no_background .KofiImageContainer .KofiImage{width:1.5em;height:auto;margin:auto;padding-left:.0405405405em}@-webkit-keyframes kofi-wiggle{0%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}15%{-webkit-transform:rotate(0) scale(1.12);transform:rotate(0) scale(1.12)}20%{-webkit-transform:rotate(0) scale(1.1);transform:rotate(0) scale(1.1)}24%{-webkit-transform:rotate(-10deg) scale(1.1);transform:rotate(-10deg) scale(1.1)}28%{-webkit-transform:rotate(10deg) scale(1.1);transform:rotate(10deg) scale(1.1)}32%{-webkit-transform:rotate(-10deg) scale(1.1);transform:rotate(-10deg) scale(1.1)}36%{-webkit-transform:rotate(10deg) scale(1.1);transform:rotate(10deg) scale(1.1)}40%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}}@keyframes kofi-wiggle{0%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}15%{-webkit-transform:rotate(0) scale(1.12);transform:rotate(0) scale(1.12)}20%{-webkit-transform:rotate(0) scale(1.1);transform:rotate(0) scale(1.1)}24%{-webkit-transform:rotate(-10deg) scale(1.1);transform:rotate(-10deg) scale(1.1)}28%{-webkit-transform:rotate(10deg) scale(1.1);transform:rotate(10deg) scale(1.1)}32%{-webkit-transform:rotate(-10deg) scale(1.1);transform:rotate(-10deg) scale(1.1)}36%{-webkit-transform:rotate(10deg) scale(1.1);transform:rotate(10deg) scale(1.1)}40%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}100%{-webkit-transform:rotate(0) scale(1);transform:rotate(0) scale(1)}}
+.SocialPreviewBox {
+  font-family: 'Nunito', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  width: calc(1280px - 2 * 80px);
+  height: calc(640px - 2 * 80px);
+  padding: 80px;
+  margin: auto;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
+}
+.SocialPreview {
+  margin: auto;
+  font-size: 200%;
+}
+.SocialPreview > * {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h1 {
+  font-family: "Fira Code", monospace;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+figure {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: safe center;
+  align-items: safe center;
+  gap: 1em;
+}
 
-/*# sourceMappingURL=main.f25bce03.css.map*/
+
+/*# sourceMappingURL=main.e493ee08.css.map*/
