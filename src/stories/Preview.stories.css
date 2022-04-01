@@ -1,0 +1,42 @@
+@import url(https://cdn.jsdelivr.net/npm/firacode@6.2.0/distr/fira_code.css);
+@import url(https://fonts.googleapis.com/css?family=Nunito);
+
+.SocialPreviewBox {
+  font-family: 'Nunito', Arial, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  width: calc(1280px - 2 * 80px);
+  height: calc(640px - 2 * 80px);
+  padding: 80px;
+  margin: auto;
+  background: white;
+  color: black;
+  border: 1px solid black;
+  display: flex;
+  justify-content: safe center;
+  align-items: safe center;
+}
+.SocialPreview {
+  margin: auto;
+  font-size: 200%;
+}
+.SocialPreview > * {
+  width: fit-content;
+}
+h1 {
+  font-family: "Fira Code", monospace;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  width: fit-content;
+}
+h2 {
+  margin-left: auto;
+  margin-right: auto;
+}
+figure {
+  margin: 0;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: safe center;
+  align-items: safe center;
+  gap: 1em;
+}
