@@ -7,8 +7,15 @@ jobs:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [windows-latest, macos-latest, ubuntu-18.04, ubuntu-latest]
-        node-version: [14, 16]
+        os:
+          [
+            windows-latest,
+            macos-latest,
+            ubuntu-18.04,
+            ubuntu-20.04,
+            ubuntu-22.04,
+          ]
+        node-version: [14, 16, 18]
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@v3
@@ -16,7 +23,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-          cache: 'npm'
+          cache: "npm"
       - name: "Clean Install"
         run: npm ci
       - name: "Run Tests"

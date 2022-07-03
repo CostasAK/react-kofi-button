@@ -1,6 +1,7 @@
 name: NodeJS Continuous Deployment
 
 on:
+  workflow_dispatch:
   push:
     branches: [main]
 
@@ -10,10 +11,10 @@ jobs:
     steps:
       - name: "Checkout Repository"
         uses: actions/checkout@v3
-      - name: "Setup Node.js 16"
+      - name: "Setup Node.js"
         uses: actions/setup-node@v3
         with:
-          node-version: "16"
+          node-version: "current"
           cache: "npm"
       - name: "Clean Install"
         run: npm ci
@@ -25,6 +26,8 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
+      - name: "No Jekyll"
+        run: touch ./public/.nojekyll
       - name: "GH Pages Deploy"
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
