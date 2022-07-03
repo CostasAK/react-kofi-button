@@ -82,5 +82,8 @@
     "sass": "^1.49.9",
     "storybook-dark-mode": "^1.0.9",
     "webpack": "^5.70.0"
+  },
+  "dependencies": {
+    "@fontsource/quicksand": "^4.5.9"
   }
 }
