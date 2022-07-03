@@ -26,8 +26,6 @@ jobs:
         uses: JS-DevTools/npm-publish@v1
         with:
           token: ${{ secrets.NPM_TOKEN }}
-      - name: "No Jekyll"
-        run: touch ./public/.nojekyll
       - name: "GH Pages Deploy"
         run: |
           git remote set-url origin https://git:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
